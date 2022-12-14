@@ -15,9 +15,6 @@ RUN apt-get update && apt-get install -y \
     dos2unix \
     cmake
 
-#Xdebug
-RUN pecl install xdebug && docker-php-ext-enable xdebug
-
 # Memcached
 RUN apt-get update && apt-get install -y libmemcached11 libmemcachedutil2 libmemcached-dev libz-dev git
 RUN pecl install memcached && docker-php-ext-enable memcached
@@ -29,7 +26,6 @@ RUN printf '[PHP]\ndate.timezone = "Europe/Madrid"\n' > /usr/local/etc/php/conf.
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY docker/php-fpm/conf/app.ini /usr/local/etc/php/conf.d/
 COPY docker/php-fpm/conf/www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY docker/php-fpm/entrypoint.sh /usr/local/bin/entrypoint
 

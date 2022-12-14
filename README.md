@@ -27,7 +27,7 @@ To start the project, run the following command:
 docker-compose up
 ~~~
 
-This will start the project and all of its dependencies. You should now be able to access the project at http://localhost:8080 or the relevant port specified in the docker-compose.yml file.
+This will start the project and all of its dependencies. You should now be able to access the project.
 
 ## Stopping the project
 To stop the project, press `CTRL+C` in the terminal where the project is running. This will stop the containers, but they will still exist on your system.

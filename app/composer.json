@@ -12,15 +12,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Core\\": "core",
             "App\\": "src/",
             "Tests\\": "tests/"
         }
     },
     "require": {
         "php": ">=8.0",
-        "ext-json": "*",
-        "php-di/php-di": "^6.4"
+        "league/climate": "^3.8"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",

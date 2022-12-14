@@ -1,15 +1,6 @@
 version: '3.7'
 
 services:
-  server:
-    container_name: dice-roll-nginx
-    build:
-      context: .
-      dockerfile: docker/nginx/Dockerfile
-    ports:
-      - "8080:80"
-    volumes:
-      - ./public:/app/public
 
   php:
     container_name: dice-roll-php

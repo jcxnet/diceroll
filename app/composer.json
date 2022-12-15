@@ -18,7 +18,9 @@
     },
     "require": {
         "php": ">=8.0",
-        "league/climate": "^3.8"
+        "league/climate": "^3.8",
+        "ramsey/uuid": "^4.6",
+        "php-di/php-di": "^6.4"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",

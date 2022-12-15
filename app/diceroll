@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+    use App\Game\Application\Game\Intro\GameIntro;
+    use App\Game\Application\Game\Setup\GameSetup;
+    use App\Game\Application\Game\Start\GameStart;
+    use App\Game\Application\Player\Create\CreatePlayer;
+
+require __DIR__ . '/bootstrap.php';
+
+    $intro = $container->get(GameIntro::class);
+    $setup = $container->get(GameSetup::class);
+    $start = $container->get(GameStart::class);
+    $createPlayer = $container->get(CreatePlayer::class);
+
+    $intro();
+    $setup();
+    $start();
+
+    for($i=1; $i<=5; $i++) {
+        $player = $createPlayer->create();
+        echo "Player $i {$player->name()} \r\n";
+    }
+
+    exit(1);

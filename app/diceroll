@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+use Game\Application\Game\Intro\GameIntro;
+use Game\Application\Game\Setup\GameSetup;
+use Game\Application\Game\Start\GameStart;
+use Game\Application\Player\Create\CreatePlayer;
+
+require __DIR__ . '/bootstrap.php';
+
+    $intro = $container->get(GameIntro::class);
+    $setup = $container->get(GameSetup::class);
+    $start = $container->get(GameStart::class);
+
+    $intro();
+    $gameSetup = $setup();
+    $start($gameSetup, $container->get(CreatePlayer::class));
+
+    exit(1);

@@ -1,0 +1,30 @@
+{
+    "name": "jcxnet/dice-roll",
+    "description": "Simple dice roll game",
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Jcxnet",
+            "email": "jcxnet@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Game\\": "src/Game",
+            "Shared\\": "src/Shared",
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "league/climate": "^3.8",
+        "ramsey/uuid": "^4.6",
+        "php-di/php-di": "^6.4"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.5"
+    }
+}

@@ -24,11 +24,20 @@ docker-compose build
 
 To start the project, run the following command:
 ~~~
-docker-compose up
+docker-compose up -d
 ~~~
 
 This will start the project and all of its dependencies. You should now be able to access the project.
-
+## Play the game
+To run the game, run the following command:
+~~~
+docker-compose exec php ./diceroll
+~~~
+or could be open the docker terminal instance and run the following command in the `/app` directory :
+~~~
+./diceroll
+~~~
+This will display the game setup and ask for the configuration to roll the dice.
 ## Stopping the project
 To stop the project, press `CTRL+C` in the terminal where the project is running. This will stop the containers, but they will still exist on your system.
 

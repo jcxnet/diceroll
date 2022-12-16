@@ -42,7 +42,7 @@ final class CreatePlayer
         $uuid = $this->uuidGenerator->generate();
         $strategy = $this->selectStrategy();
 
-        return new Player(new PlayerName($uuid), $strategy);
+        return new Player(new PlayerName($uuid), $strategy, $dice);
     }
 
     private function selectStrategy(): StrategyInterface

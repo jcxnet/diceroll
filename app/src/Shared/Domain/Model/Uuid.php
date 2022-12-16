@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Shared\Domain\Model;
+namespace Shared\Domain\Model;
 
 abstract class Uuid
 {

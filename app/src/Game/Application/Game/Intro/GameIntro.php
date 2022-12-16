@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Game\Application\Game\Intro;
+namespace Game\Application\Game\Intro;
 
-use App\Shared\Domain\Contracts\Terminal;
+use Game\Infrastructure\GameTerminal;
 
 final class GameIntro
 {
-    private Terminal $terminal;
+    private GameTerminal $terminal;
 
-    public function __construct(Terminal $terminal)
+    public function __construct(GameTerminal $terminal)
     {
         $this->terminal = $terminal;
     }

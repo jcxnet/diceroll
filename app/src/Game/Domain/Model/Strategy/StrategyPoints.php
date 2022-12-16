@@ -2,7 +2,7 @@
 
 namespace Game\Domain\Model\Strategy;
 
-class StrategyPoints extends Strategy implements StrategyInterface
+final class StrategyPoints extends Strategy implements StrategyInterface
 {
     private LimitInterface $points;
 

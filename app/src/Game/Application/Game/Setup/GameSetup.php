@@ -91,14 +91,7 @@ final class GameSetup
 
     public function info(): void
     {
-        $setup = $this->gameSetup;
-        $data = [
-            ['Dice', sprintf('%s, %d sides, low number is %s, max number is %d', $setup->dice()->name(), $setup->dice()->sides(), $setup->dice()->min(), $setup->dice()->max())],
-            ['Game mode', $setup->mode()->detail()],
-            ['Rounds', $setup->rounds()->value()],
-            ['Players', $setup->players()->value()],
-        ];
-
+        $data = $this->gameSetup->info();
         $this->terminal->subtitle('Options selected');
         $this->terminal->info($data);
     }

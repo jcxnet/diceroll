@@ -38,6 +38,17 @@ final class GameSetup
     {
         return $this->players;
     }
+    
+    public function info(): array
+    {
+        return [
+            ['Dice', sprintf('%s, %d sides, low number is %s, max number is %d', $this->dice()->name(), $this->dice()->sides(), $this->dice()->min(), $this->dice()->max())],
+            ['Game mode', $this->mode()->detail()],
+            ['Rounds', $this->rounds()->value()],
+            ['Points', sprintf('Player sum points if the round score is lower or equal to %d, otherwise is 0', $this->dice->scoreLimit())],
+            ['Players', $this->players()->value()],
+        ];
+    }
 
 
 }

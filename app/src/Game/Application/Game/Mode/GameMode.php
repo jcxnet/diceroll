@@ -12,7 +12,7 @@ final class GameMode
 {
 
     private const MODES = [
-        GameModeModel::MODE_COMPLETE_ROUNDS => 'Each player rolls the dice until he finishes all his rounds',
+        GameModeModel::MODE_COMPLETE_ROUNDS => 'Each player rolls the dice until finishes all his rounds',
         GameModeModel::MODE_ALTERNATE_ROUNDS => 'Each player rolls the dice per round',
     ];
 

@@ -2,7 +2,7 @@
 
 namespace Game\Domain\Model\Strategy;
 
-class StrategyThrows extends Strategy implements StrategyInterface
+final class StrategyThrows extends Strategy implements StrategyInterface
 {
     private LimitInterface $throws;
 

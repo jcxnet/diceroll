@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Shared\Domain\ValueObject;
+namespace Shared\Domain\ValueObject;
 
 class IntValueObject
 {
